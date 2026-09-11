@@ -27,9 +27,10 @@ def is_armstrong_number(number):
     return False
 
 st.title("Armstrong Number Program")
-number_string=" "
-while not number_string.isdigit():
-  number_string = st.text_input("Enter a number: ")
+num_string=" "
+while not num_string.isdigit():
+  num_string = st.text_input("Enter a number: ")
+number = int(num_string)
 if is_armstrong_number(number):
     st.write(str(number) + " is an Armstrong number")
 else:
