@@ -27,10 +27,19 @@ def is_armstrong_number(number):
     return False
 
 st.title("Armstrong Number Program")
-num_string=" "
-while not num_string.isdigit():
-  num_string = st.text_input("Enter a number: ")
-number = int(num_string)
+num_string = st.text_input("Enter a number: ")
+if not num_string:
+    st.info("Awaiting input")
+    st.stop()
+
+if not num_string.isdigit():
+  st.write("Please make sure to enter a positive whole number")
+  st.stop()
+else:
+    number=int(num_string)
+if number == 0:
+    st.write("Please make sure to enter a positive whole number")
+    st.stop()
 if is_armstrong_number(number):
     st.write(str(number) + " is an Armstrong number")
 else:
