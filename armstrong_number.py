@@ -42,5 +42,6 @@ if number == 0:
     st.stop()
 if is_armstrong_number(number):
     st.write(str(number) + " is an Armstrong number")
+    st.balloons()
 else:
     st.write(str(number) + " is not an Armstrong number")
